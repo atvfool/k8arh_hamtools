@@ -1,8 +1,7 @@
 import { Counter } from "./components/Counter";
-import { DipoleCalculator } from "./components/DipoleCalculator";
 import { FetchData } from "./components/FetchData";
 import { Home } from "./components/Home";
-import { MeterCalculator } from "./components/MeterCalculator";
+import { Calculators } from "./components/Calculators";
 
 const AppRoutes = [
   {
@@ -18,12 +17,8 @@ const AppRoutes = [
     element: <FetchData />
     },
     {
-        path: '/dipole',
-        element: <DipoleCalculator />
-    },
-    {
-        path: '/meter',
-        element: <MeterCalculator />
+        path: '/calculators',
+        element: <Calculators />
     }
 ];
 
