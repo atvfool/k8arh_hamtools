@@ -19,6 +19,10 @@ const AppRoutes = [
     {
         path: '/calculators',
         element: <Calculators />
+    },
+    {
+        path: '/hambandspng',
+        file: '/HambandsVertical.png'
     }
 ];
 

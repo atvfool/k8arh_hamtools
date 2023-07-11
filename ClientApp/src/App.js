@@ -12,8 +12,13 @@ export default class App extends Component {
       <Layout>
         <Routes>
           {AppRoutes.map((route, index) => {
-            const { element, ...rest } = route;
-            return <Route key={index} {...rest} element={element} />;
+              const { element, ...rest } = route;
+              console.log(rest);
+              if (rest['path'] == 'hambandspng') {
+                  return <Route key={index} {...rest} path={rest['file']} />;
+              } else {
+                  return <Route key={index} {...rest} element={element} />;
+              }
           })}
         </Routes>
       </Layout>

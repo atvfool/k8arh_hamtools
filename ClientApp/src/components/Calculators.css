@@ -1,3 +1,7 @@
 ﻿.calcWrapper{
     background-color:lightgray;
 }
+
+.calcSelect {
+    width: 100%;
+}

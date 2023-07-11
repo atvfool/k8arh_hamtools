@@ -8,8 +8,8 @@ export default function CalculatorFunction() {
     const [calc, setCalc] = useState();
 
     return (
-        <div class="calcWrapper">
-            <select value={calc} onChange={e => setCalc(e.target.value)}>
+        <div className="calcWrapper">
+            <select className="calcSelect" value={calc} onChange={e => setCalc(e.target.value)}>
                 <option value="">Select a Calculator</option>
                 <option value="dipole">Dipole</option>
                 <option value="meter">Meter</option>

@@ -35,6 +35,9 @@ export class NavMenu extends Component {
             <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/calculators">Calculators</NavLink>
             </NavItem>
+            <NavItem>
+                <NavLink tag={Link} className="text-dark" to="HamBandsVertical.png">HamBandspng (284kB)</NavLink>                        
+            </NavItem>
             </ul>
           </Collapse>
         </Navbar>

@@ -1,12 +1,13 @@
 ﻿import React, { Component, useState } from 'react';
+import { FrequencySelector } from "./FrequencySelector";
 
 export default function MeterCalculatorFunction() {
     const [targetFrequency, setTargetFrequency] = useState('146.520');
     const [freqInMeters, setFreqInMeters] = useState();
 
-    function calculate(freq) {
-        setTargetFrequency(freq);
-        setFreqInMeters(300 / freq);
+    function calculate(field, value) {
+        setTargetFrequency(value);
+        setFreqInMeters(300 / value);
     }
 
     return (
@@ -16,11 +17,7 @@ export default function MeterCalculatorFunction() {
             <p>A simple calculator for finding the frequency in meters</p>
             <p>The forumla for calculating in meters is 300/frequency</p>
             <div>
-                <div>
-                    Frequency(Hz):
-                    <input name="targetFrequency" type="number" placeholder="146.520" step="0.15" min="1" value={targetFrequency} onChange={e => calculate(e.target.value)} />
-                </div>
-
+                <FrequencySelector frequency={targetFrequency} onChange={calculate.bind(this)} />
                 <div>
                     Meters:
                     {freqInMeters}
